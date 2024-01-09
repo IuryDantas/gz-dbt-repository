@@ -16,7 +16,7 @@ sources:
             tests:
               - IS NOT NULL
               - unique:
-                column_name: "(orders_id || '_' || shipping_fee)"
+                  column_name: "(orders_id || '_' || shipping_fee)"
           - name: products_id
             description: the identification number of the products
             tests:
