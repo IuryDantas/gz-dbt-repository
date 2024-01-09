@@ -10,3 +10,4 @@ FROM
 JOIN
     {{ ref('stg_raw__product') }}
 USING (products_id)
+ORDER BY orders_id DESC
