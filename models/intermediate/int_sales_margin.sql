@@ -1,5 +1,5 @@
 SELECT *
-   , revenue-purchase_price AS margin
+   , ROUND(revenue-purchase_price,2) AS margin
 
 FROM
     {{ ref('stg_raw__sales') }}
