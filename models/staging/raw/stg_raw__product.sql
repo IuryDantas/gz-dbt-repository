@@ -10,7 +10,7 @@ renamed as (
 
     select
         products_id,
-        CAST(purchse_price as INT) as purchase_price
+        CAST(purchse_price AS INT) as purchase_price
 
     from source
 
