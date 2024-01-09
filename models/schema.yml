@@ -1,0 +1,49 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: gz_raw_data
+    description: greenweez raw data source, coming from Bigquery
+    tables:
+      - name: sales
+        identifier: raw_gz_sales
+        description: sales of greenweez / we have one row per products_id found in each orders_id.
+        tests:
+          - unique:
+              column_name: "(orders_id || '_' || pdt_id)"
+        columns:
+          - name: date_date
+            description: the date of purchase
+          - name: orders_id
+            description: Primary key of the table and the id of the orders
+          - name: products_id
+            description: the identification number of the products
+          - name: revenue
+            description: the total amount of revenue
+          - name: quantity
+            description: the stored quantity of the item
+      - name: product
+        identifier: raw_gz_product
+        description: information about greenweez products
+        columns:
+          - name: products_id
+            description: the id of the products as on sales table
+            tests:
+              - unique
+              - not_null
+          - name: purchse_price
+            description: the price of each purchase
+      - name: ship
+        identifier: raw_gz_ship
+        description: greenweez information on the shippments
+        columns:
+          - name: orders_id
+            description: the id of the orders as on sales table
+            tests:
+              - unique
+          - name: shipping_fee
+            description: the fee of each purchase
+          - name: logCost
+            description: the logistics cost of each purchase
+          - name: ship_cost
+            description: the shippments cost of each purchase
