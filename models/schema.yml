@@ -48,6 +48,78 @@ sources:
             description: the logistics cost of each purchase
           - name: ship_cost
             description: the shippments cost of each purchase
+      - name: adwords
+        identifier: raw_gz_adwords
+        description: greenweez info about adwords campaigns
+        columns:
+          - name: date_date
+            description: date of campaigns
+          - name: paid_source
+            description: payment source
+          - name: campaign_key
+            description: Name of the key
+          - name: camPGN_name
+            description: name of the campaign
+          - name: ads_cost
+            description: payment source
+          - name: impression
+            description: payment source
+          - name: click
+            description: payment source
+      - name: bing
+        identifier: raw_gz_bing
+        description: greenweez info about Bing campaigns
+        columns:
+          - name: date_date
+            description: date of campaigns
+          - name: paid_source
+            description: payment source
+          - name: campaign_key
+            description: Name of the key
+          - name: camPGN_name
+            description: name of the campaign
+          - name: ads_cost
+            description: payment source
+          - name: impression
+            description: payment source
+          - name: click
+            description: payment source
+      - name: criteo
+        identifier: raw_gz_criteo
+        description: greenweez info about Criteo campaigns
+        columns:
+          - name: date_date
+            description: date of campaigns
+          - name: paid_source
+            description: payment source
+          - name: campaign_key
+            description: Name of the key
+          - name: camPGN_name
+            description: name of the campaign
+          - name: ads_cost
+            description: payment source
+          - name: impression
+            description: payment source
+          - name: click
+            description: payment source
+      - name: facebook
+        identifier: raw_gz_facebook
+        description: greenweez info about Facebook campaigns
+        columns:
+          - name: date_date
+            description: date of campaigns
+          - name: paid_source
+            description: payment source
+          - name: campaign_key
+            description: Name of the key
+          - name: camPGN_name
+            description: name of the campaign
+          - name: ads_cost
+            description: payment source
+          - name: impression
+            description: payment source
+          - name: click
+            description: payment source
 
 
 models:
